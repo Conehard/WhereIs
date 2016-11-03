@@ -42,8 +42,6 @@ body{
     border-bottom: 1px solid #000;
 }
 
-
-
 .imagemcategoria img{
     width: 31%;
     height: auto;
@@ -67,7 +65,7 @@ body{
     height: auto;
     position: absolute;
     top: 0;
-    margin-top: 5%;
+    margin-top: 6%;
 }
 
 #tabs{
@@ -77,3 +75,51 @@ body{
     bottom:0;
     position:absolute;
 }   
+
+.sidenav{
+    font-family: 'Roboto', sans-serif;
+    height: 80%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #818181;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#menuicone{
+    background-image: url('../img/menuicon.png');
+    width: 30px;
+    height: 28px;
+    top:0;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2%;
+    margin-left: 2%;
+    position: absolute;
+}

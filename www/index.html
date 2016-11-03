@@ -45,6 +45,9 @@
 
 <body>
     <div id="header"></div>
+    
+
+    <div id="menuicone" onclick="openNav()"></div>
     <div id="titulo">Principal</div>
     <div id="conteudo">
         <div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
@@ -53,13 +56,25 @@
             <div class="nomecategoria"><p>Comida</p></div>
             <div class="descricao"><p>Bares e restaurantes</p></div>         
         </div>
-        
+    </div>
+    <div id="menu" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Sobre</a>
     </div>
     <div id="tabs"></div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("menu").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("menu").style.width = "0";
+        }
     </script>
 </body>
 
