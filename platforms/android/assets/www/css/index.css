@@ -37,7 +37,6 @@ body{
     height: 50px;
     background-color: #a9aea9;
     position: relative;
-    
 }
 
 #mensagem p{
@@ -100,7 +99,6 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-
 }
 
 .sidenav a{
@@ -173,9 +171,7 @@ body{
     border-top: 1px solid #000;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
-    font-family: 'Roboto', sans-serif;
-    
-    
+    font-family: 'Roboto', sans-serif;  
 }
 
 .tabs label{  
