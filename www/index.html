@@ -47,8 +47,9 @@
     <div id="header"></div>
     
 
-    <div id="menuicone" onclick="openNav()"></div>
+    <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
     <div id="titulo">Principal</div>
+    <div id="espaco"></div>
     <div id="conteudo">
         <div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
         <div class="categoria">
@@ -56,12 +57,59 @@
             <div class="nomecategoria"><p>Comida</p></div>
             <div class="descricao"><p>Bares e restaurantes</p></div>         
         </div>
+        <div class="categoria">
+            <div class="imagemcategoria"><img src="img/img.png" alt=""></div>
+            <div class="nomecategoria"><p>Comida</p></div>
+            <div class="descricao"><p>Bares e restaurantes</p></div>         
+        </div>
+        <div class="categoria">
+            <div class="imagemcategoria"><img src="img/img.png" alt=""></div>
+            <div class="nomecategoria"><p>Comida</p></div>
+            <div class="descricao"><p>Bares e restaurantes</p></div>         
+        </div>
+        <div class="categoria">
+            <div class="imagemcategoria"><img src="img/img.png" alt=""></div>
+            <div class="nomecategoria"><p>Comida</p></div>
+            <div class="descricao"><p>Bares e restaurantes</p></div>         
+        </div>
+        <div class="categoria">
+            <div class="imagemcategoria"><img src="img/img.png" alt=""></div>
+            <div class="nomecategoria"><p>Comida5</p></div>
+            <div class="descricao"><p>Bares e restaurantes</p></div>         
+        </div>
+        <div class="categoria">
+            <div class="imagemcategoria"><img src="img/img.png" alt=""></div>
+            <div class="nomecategoria"><p>Comida5</p></div>
+            <div class="descricao"><p>Bares e restaurantes</p></div>         
+        </div>
+
     </div>
     <div id="menu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">Sobre</a>
+      <hr>
+      <a href="#"><span class="material-icons">face</span> Alimentação</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Saúde</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Hospedagem e moradia</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Conveniência</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Entrentenimento</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Demanis Localidades</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Configurações</a>
+      <hr>
+      <a href="#"><i class="material-icons">face</i> Sobre</a>
+      <hr>
     </div>
-    <div id="tabs"></div>
+    
+    <div id="tabs">
+        <div id="tabcategoria"></div>
+        <div id="tablocais"></div>
+        <div id="tabsocial"></div>
+    </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
@@ -69,7 +117,7 @@
     </script>
     <script>
         function openNav() {
-            document.getElementById("menu").style.width = "250px";
+            document.getElementById("menu").style.width = "50%";
         }
 
         function closeNav() {
