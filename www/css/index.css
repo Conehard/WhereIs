@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 body{
     margin:0px; 
 
@@ -38,7 +37,6 @@ body{
     height: 50px;
     background-color: #a9aea9;
     position: relative;
-    
 }
 
 #mensagem p{
@@ -101,7 +99,6 @@ body{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-
 }
 
 .sidenav a{
@@ -110,6 +107,21 @@ body{
     font-size: 25px;
     color: #000;
     display: block;
+    transition: 0.3s;
+    position: relative;   
+}
+
+.sidenav a img{
+     
+   transition: 0.3s
+}
+
+.sidenav a span{
+
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    margin-right: 30%;
     transition: 0.3s
 }
 
@@ -136,4 +148,55 @@ body{
     margin-left: 2%;
     position: fixed;
     z-index: 1;
+}
+
+#tabcategoria{
+    margin-right: 0.1%;
+}
+
+#tablocais{  
+    margin-left: 33.33%;
+}
+
+#tabsocial{
+    margin-left: 66.66%;
+}
+
+.tabs{
+    min-width: 33.33%;
+    max-width: 33.33%;
+    min-height: 100%;
+    background-color: #3d9d7d;
+    position: absolute;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.tabs label{  
+    background-image: url(../img/false.png);
+    background-repeat: no-repeat;
+    bottom: 0px;
+    cursor: pointer;
+    font-size: 0;
+    left: 39%;
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}
+
+.tabs input{
+  display: none;
+}
+
+.tabs input:checked + label:after {
+  background: url(../img/true.png);
+  content: ""; 
+  height: 28px;
+  position: absolute;
+  right: 47%;
+  width: 30px;
+  top: 0px;
+  left: 0px;
 }

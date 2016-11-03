@@ -1,0 +1,206 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body{
+    margin:0px; 
+
+}
+#header{
+    width: 100%;
+    height: 60px;
+    background-color: #3d9d7d;
+    top:0;
+    position: fixed;
+    z-index: 1;
+}
+#espaco{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+#conteudo{
+    position: relative;
+    width: 100%;
+    top: 0;
+    height: auto;
+}
+#titulo{
+    top:0;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    margin-left: 14%;
+    position: fixed;
+    z-index: 1;
+}
+
+#mensagem{
+    width: 100%;
+    height: 50px;
+    background-color: #a9aea9;
+    position: relative;
+    
+}
+
+#mensagem p{
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px;
+    margin-left: 2%;
+}
+
+.categoria{
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    border-bottom: 1px solid #000;
+}
+
+.imagemcategoria img{
+    width: 31%;
+    height: auto;
+    position: relative;
+    border-right: 1px solid #000;
+    margin-bottom: -4px; 
+}
+
+.nomecategoria{
+    margin-left: 35%;
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+
+.descricao{
+    margin-left: 35%;
+    font-family: 'Roboto', sans-serif;
+    color: #ababab;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 6%;
+}
+
+#tabs{
+    width: 100%;
+    height: 50px;
+    background-color: #3d9d7d;
+    bottom:0;
+    position:fixed;
+}   
+
+.sidenav{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+    position: relative;   
+}
+
+.sidenav a img{
+     
+   transition: 0.3s
+}
+
+.sidenav a span{
+
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    margin-right: 30%;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #818181;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#menuicone{
+   
+    width: 30px;
+    height: 28px;
+    top:0;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    margin-left: 2%;
+    position: fixed;
+    z-index: 1;
+}
+
+#tabcategoria{
+    margin-right: 0.1%;
+}
+
+#tablocais{  
+    margin-left: 33.33%;
+}
+
+#tabsocial{
+    margin-left: 66.66%;
+}
+
+.tabs{
+    min-width: 33.33%;
+    max-width: 33.33%;
+    min-height: 100%;
+    background-color: #3d9d7d;
+    position: absolute;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+
+.tabs label{  
+    background-image: url(../img/false.png);
+    background-repeat: no-repeat;
+    bottom: 0px;
+    cursor: pointer;
+    font-size: 0;
+    left: 39%;
+    position: absolute;
+    right: 0px;
+    top: 20%;
+}
+
+.tabs input{
+  display: none;
+}
+
+.tabs input:checked + label:after {
+  background: url(../img/true.png);
+  content: ""; 
+  height: 28px;
+  position: absolute;
+  right: 47%;
+  width: 30px;
+  top: 0px;
+  left: 0px;
+}
