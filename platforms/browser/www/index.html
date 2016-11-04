@@ -52,6 +52,7 @@
     <div id="titulo" >Principal</div>
     <div id="espaco"></div>
     <div id="conteudo" >
+        
         <div ng-view></div>
     </div>  
     <div id="menu" class="sidenav">
@@ -77,28 +78,24 @@
     
     <div id="tabs">
         <div id="tabcategoria" class="tabs">
-            
                 <input name="tabs_principal" type="radio" id="categoria" checked>
-                <label for="categoria">Categoria</label>
-            
+                <label for="categoria" onClick="document.location='#/';">Categoria</label>
          </div>
         <div id="tablocais" class="tabs">
-            
                 <input name="tabs_principal" type="radio" id="locais">
-                <label for="locais">Locais</label>
-            
+                <label for="locais" onClick="document.location='#/comercios';">Locais</label>
         </div>
         <div id="tabsocial" class="tabs">
-          
-                <input name="tabs_principal" type="radio" id="social">
-                <label for="social">Social</label>
-            
+                <input name="tabs_principal" type="radio" id="social" >
+                <label for="social" onClick="document.location='#/social/';">Social</label>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/catcontroller.js"></script>
+    <script type="text/javascript" src="js/socialcontroller.js"></script>
+    <script type="text/javascript" src="js/comercioscontroller.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
     <script src="js/routes.js"></script>
     <script type="text/javascript">
