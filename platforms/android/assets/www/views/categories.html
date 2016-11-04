@@ -1,6 +1,6 @@
 <div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
-<div class="categoria" ng-repeat="cat in categories">
-	<div class="imagemcategoria"><img src="{{cat.image}}" alt=""></div>
+<div class="categoria" ng-repeat="cat in categories | orderBy: 'name'">
+	<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>
 	<div class="nomecategoria"><p>{{cat.name}}</p></div>
 	<div class="descricao"><p>{{cat.descricao}}</p></div>         
 </div>
