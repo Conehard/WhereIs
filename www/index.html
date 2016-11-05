@@ -47,26 +47,10 @@
 </head>
 
 <body ng-app="whereIs">
-    <div id="header"></div>
-    <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
-    <div id="titulo" >Principal</div>
-    <div id="espaco"></div>
-    <div id="conteudo" >
-        <div class="comercios">
-            <div class="tabsmeio">
-                <div class="tabesquerda"></div>
-                <div class="tabcentro"></div>
-                <div class="tabdireita"></div>
-            </div>
-            <div class="imagemcomercio"><img src="img/img.png" alt=""></div>
-            <div class="nomecomercio">André Assunção</div>
-            <div class="enderecocomercio">@theconehard</div>
-            <div class="telefonecomercio">1m</div>
-            <div class="avaliacaocomercio"></div>
-        </div>
-
-        <div ng-view></div>
-    </div>  
+    <div ng-view></div>
+                  
+          
+          
     <div id="menu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>MENU</span>&times;</a>
       <hr>
@@ -81,6 +65,8 @@
       <a href="#" onclick="closeNav()"><img src="iconfont/movie.png" alt=""> Entrentenimento</a>
       <hr>
       <a href="#" onclick="closeNav()"><img src="iconfont/satelite.png" alt=""> Demais Localidades</a>
+      <hr>
+      <a href="#" onclick="closeNav()"><img src="iconfont/tourist.png" alt=""> Pontos Turísticos</a>
       <hr>
       <a href="#" onclick="closeNav()"><img src="iconfont/settings.png" alt=""> Configurações</a>
       <hr>

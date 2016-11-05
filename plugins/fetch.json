@@ -166,5 +166,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-twitter": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-twitter"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

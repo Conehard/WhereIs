@@ -1,0 +1,15 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-twitter": {
+            "PACKAGE_NAME": "com.whereisapp.app"
+        }
+    },
+    "dependent_plugins": {}
+}

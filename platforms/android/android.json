@@ -4,8 +4,36 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"TwitterPlugin\"><param name=\"android-package\" value=\"com.phonegap.plugins.TwitterPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
-    "installed_plugins": {},
-    "dependent_plugins": {}
+    "installed_plugins": {
+        "cordova-twitter": {
+            "PACKAGE_NAME": "com.whereisapp.app"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-twitter.TwitterPlugin",
+            "file": "plugins/cordova-twitter/www/TwitterPlugin.js",
+            "pluginId": "cordova-twitter",
+            "clobbers": [
+                "Twitter"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-twitter": "0.8.5"
+    }
 }

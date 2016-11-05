@@ -1,12 +1,22 @@
-<div id="mensagem"><p>Faça um tweet utilizando a hashtag #appwhereis e apareça no nosso feed</p></div>
-<div class="social">
-    <div class="fototwitter"><img src="img/img.png" alt=""></div>
-    <div class="nometwitter">André Assunção</div>
-    <div class="usertwitter">@theconehard</div>
-    <div class="horatweet">1m</div>
-    <div class="tweet"></div>
-</div>
+<div id="header"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo" ng-repeat="cat in categories | limitTo:1" ng-style="background-color:{{cat.cor}}">{{cat.titulo}}</div>
+<div id="espaco"></div>
 
-<script>
-var tab = 3;
-</script>
+<div id="conteudo" >    
+     <div class="tabsmeio" ng-repeat="cat in categories | limitTo:1" ng-style="background-color:{{cat.cor}}">
+               <div class="tabesquerda"></div>
+               <div class="tabcentro"></div>
+               <div class="tabdireita"></div>
+          </div>
+          <div id="espacomensagem"></div>
+     <div class="comercios">
+          <div class="imagemcomercio"><img src="img/img.png" alt=""></div>
+          <div class="nomecomercio">Nome local</div>
+          <div class="enderecocomercio">Endereço: </div>
+          <div class="telefonecomercio">Telefone: </div>
+          <div class="avaliacaocomercio">Avaliação: 1-2-3-4-5</div>
+           <div class="avaliacaocomercion">65 </div>
+     </div>
+
+</div>

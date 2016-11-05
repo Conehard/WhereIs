@@ -1,10 +1,13 @@
+<div id="header"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo" ng-repeat="cat in categories | limitTo:1" >{{cat.titulo}}</div>
+<div id="espaco"></div>
 <div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
-<div class="categoria" ng-repeat="cat in categories | orderBy: 'name'">
-	<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>
-	<div class="nomecategoria"><p>{{cat.name}}</p></div>
-	<div class="descricao"><p>{{cat.descricao}}</p></div>         
+<div id="espacomensagem"></div>
+<div id="conteudo" >    
+	<div class="categoria" ng-repeat="cat in categories | orderBy: 'name'">
+		<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>
+		<div class="nomecategoria"><p>{{cat.name}}</p></div>
+		<div class="descricao"><p>{{cat.descricao}}</p></div>         
+	</div>
 </div>
-
-<script>
-var tab = 1;
-</script>

@@ -84,6 +84,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.whereisapp.app"
+        },
+        "cordova-twitter": {
+            "PACKAGE_NAME": "com.whereisapp.app"
         }
     },
     "dependent_plugins": {},
@@ -999,6 +1002,14 @@
                 "navigator.notification",
                 "navigator"
             ]
+        },
+        {
+            "file": "plugins/cordova-twitter/www/TwitterPlugin.js",
+            "id": "cordova-twitter.TwitterPlugin",
+            "pluginId": "cordova-twitter",
+            "clobbers": [
+                "Twitter"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -1022,6 +1033,7 @@
         "cordova-plugin-splashscreen": "3.2.2",
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-vibration": "2.1.2",
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-twitter": "0.8.5"
     }
 }
