@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-twitter": {
             "PACKAGE_NAME": "com.whereisapp.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.whereisapp.app"
         }
     },
     "dependent_plugins": {}

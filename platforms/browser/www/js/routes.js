@@ -12,10 +12,45 @@ function config($routeProvider, $locationProvider) {
       controller: 'SocialCtrl'
     })
     .when('/comercios', {
-      templateUrl: 'views/comercios.html',
+      templateUrl: 'views/comerciosall.html',
       controller: 'ComerciosCtrl'
     })
-
+    .when('/alimentacao', {
+      templateUrl: 'views/comercios.html',
+      controller: 'AlimentacaoCtrl'
+    })
+    .when('/saude', {
+      templateUrl: 'views/comercios.html',
+      controller: 'SaudeCtrl'
+    })
+    .when('/hospedagem', {
+      templateUrl: 'views/comercios.html',
+      controller: 'HospedagemCtrl'
+    })
+    .when('/conveniencia', {
+      templateUrl: 'views/comercios.html',
+      controller: 'ConvenienciaCtrl'
+    })
+    .when('/entretenimento', {
+      templateUrl: 'views/comercios.html',
+      controller: 'EntretenimentoCtrl'
+    })
+    .when('/demais', {
+      templateUrl: 'views/comercios.html',
+      controller: 'DemaisCtrl'
+    })
+    .when('/pontos', {
+      templateUrl: 'views/comercios.html',
+      controller: 'PontosCtrl'
+    })
+    .when('/configs', {
+      templateUrl: 'views/configs.html',
+      controller: 'ConfigsCtrl'
+    })
+    .when('/sobre', {
+      templateUrl: 'views/sobre.html',
+      controller: 'SobreCtrl'
+    })
 
      .otherwise ({ redirectTo: '/' });
 };

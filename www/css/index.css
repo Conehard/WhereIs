@@ -2,6 +2,7 @@
 body{
     margin:0px; 
     background-color: #d0d0d0;
+    overflow: hidden;
 
 }
 #header{
@@ -62,6 +63,10 @@ body{
     background-color: #fff;
 }
 
+.categoria a{
+    text-decoration: none;
+    
+}
 .imagemcategoria img{
     width: 31%;
     height: auto;
@@ -76,7 +81,9 @@ body{
     height: auto;
     position: absolute;
     top: 0;
+    color: #000;
 }
+
 
 .descricao{
     margin-left: 35%;
@@ -163,7 +170,7 @@ body{
     position:fixed;
 }  
 #tabcategoria{
-    margin-right: 0.1%;
+    margin-right: 0%;
 }
 
 #tablocais{  
@@ -218,9 +225,15 @@ body{
 .social{
     background-color: #fff;
     width: 100%;
-    height: auto;
+    
     min-height: 20%;
     position: relative;
+}
+.social iframe{
+    overflow: hidden;
+    height: 800px;
+    width: 100%;
+
 }
 
 .fototwitter img{
@@ -278,6 +291,7 @@ body{
 .tabsmeio{
     width: 100%;
     height: 50px;
+    max-height: 50px;
     background-color: #c7222c;
     position: fixed;
     z-index: 1;
@@ -331,5 +345,37 @@ body{
 }
 
 
+.tabesquerda{
+    margin-left: 0%;
+}
+.tabcentroesquerda{
+    margin-left: 25%;
+
+}
+
+.tabcentrodireita{  
+    margin-left: 50%;
+}
+
+.tabdireita{
+    margin-left: 75%;
+}
+
+.tabsmid{
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 100%;
+    max-height: 50px;
+    background-color: #3d9d7d;
+    position: absolute;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    font-family: 'Roboto', sans-serif; 
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    cursor: pointer;
+}
 
 /*FIM CSS COMERCIO*/

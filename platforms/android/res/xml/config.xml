@@ -4,6 +4,10 @@
         <param name="android-package" value="com.phonegap.plugins.TwitterPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <name>WhereIs</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -12,14 +16,12 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
     <icon src="icon.png" />
     <access origin="*" />
-    <access origin="https://twitter.com" subdomains="true" />
-    <access origin="http://twitter.com" subdomains="true" />
-    <access origin="http://platform.twitter.com" />
-    <access origin="https://platform.twitter.com" />
-    <access origin="https://cdn.syndication.twimg.com" />
-    <access origin="http://cdn.syndication.twimg.com" />
+    <access origin="http://egendnetwork.com" />
+    <access origin="https://twitter.com" />
+    <access origin="https://*.twitter.com" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -48,4 +50,5 @@
     <preference name="loglevel" value="DEBUG" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
+    <preference name="orientation" value="portrait" />
 </widget>

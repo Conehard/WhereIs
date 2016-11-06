@@ -47,55 +47,49 @@
 </head>
 
 <body ng-app="whereIs">
-    <div ng-view></div>
-                  
-          
-          
+
+    <div ng-view></div>                        
     <div id="menu" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>MENU</span>&times;</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/restaurant.png" alt=""> Alimentação</a>
+      <a href="#/alimentacao" onclick="closeNav()"><img src="iconfont/restaurant.png" alt=""> Alimentação</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/hospital.png" alt=""> Saúde</a>
+      <a href="#/saude" onclick="closeNav()"><img src="iconfont/hospital.png" alt=""> Saúde</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/hotel.png" alt=""> Hospedagem e Moradia</a>
+      <a href="#/hospedagem" onclick="closeNav()"><img src="iconfont/hotel.png" alt=""> Hospedagem e Moradia</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/store.png" alt=""> Conveniência</a>
+      <a href="#/conveniencia" onclick="closeNav()"><img src="iconfont/store.png" alt=""> Conveniência</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/movie.png" alt=""> Entrentenimento</a>
+      <a href="#/entretenimento" onclick="closeNav()"><img src="iconfont/movie.png" alt=""> Entrentenimento</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/satelite.png" alt=""> Demais Localidades</a>
+      <a href="#/demais" onclick="closeNav()"><img src="iconfont/satelite.png" alt=""> Demais Localidades</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/tourist.png" alt=""> Pontos Turísticos</a>
+      <a href="#/pontos" onclick="closeNav()"><img src="iconfont/tourist.png" alt=""> Pontos Turísticos</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/settings.png" alt=""> Configurações</a>
+      <a href="#/configs" onclick="closeNav()"><img src="iconfont/settings.png" alt=""> Configurações</a>
       <hr>
-      <a href="#" onclick="closeNav()"><img src="iconfont/people.png" alt=""> Sobre</a>
+      <a href="#/sobre" onclick="closeNav()"><img src="iconfont/people.png" alt=""> Sobre</a>
       <hr>
     </div>
     
-    <div id="tabs">
-        <div id="tabcategoria" class="tabs">
-                <input name="tabs_principal" type="radio" id="categoria" checked>
-                <label for="categoria" onClick="document.location='#/';">Categoria</label>
-         </div>
-        <div id="tablocais" class="tabs">
-                <input name="tabs_principal" type="radio" id="locais">
-                <label for="locais" onClick="document.location='#/comercios';">Locais</label>
-        </div>
-        <div id="tabsocial" class="tabs">
-                <input name="tabs_principal" type="radio" id="social" >
-                <label for="social" onClick="document.location='#/social/';">Social</label>
-        </div>
-    </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/catcontroller.js"></script>
-    <script type="text/javascript" src="js/socialcontroller.js"></script>
-    <script type="text/javascript" src="js/comercioscontroller.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
     <script src="js/routes.js"></script>
+    <script type="text/javascript" src="js/catcontroller.js"></script>
+    <script type="text/javascript" src="js/socialcontroller.js"></script>
+    <script type="text/javascript" src="js/configscontroller.js"></script>
+    <script type="text/javascript" src="js/sobrecontroller.js"></script>
+    <!-- CONTROLLERS COMERCIOS -->
+    <script type="text/javascript" src="js/comercioscontroller.js"></script>
+    <script type="text/javascript" src="js/convenienciacontroller.js"></script>
+    <script type="text/javascript" src="js/demaiscontroller.js"></script>
+    <script type="text/javascript" src="js/entretenimentocontroller.js"></script>
+    <script type="text/javascript" src="js/hospedagemcontroller.js"></script>
+    <script type="text/javascript" src="js/pontoscontroller.js"></script>
+    <script type="text/javascript" src="js/saudecontroller.js"></script>
+    <script type="text/javascript" src="js/alimentacaocontroller.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>

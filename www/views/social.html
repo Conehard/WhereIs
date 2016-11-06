@@ -1,15 +1,29 @@
-<div id="header"></div>
+<div id="header" ng-style="{'background-color':'#7db1d5'}"></div>
 <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
-<div id="titulo" ng-repeat="cat in categories | limitTo:1" >{{cat.titulo}}</div>
+<div id="titulo">Social</div>
 <div id="espaco"></div>
 <div id="mensagem"><p>Faça um tweet utilizando a hashtag #appwhereis e apareça no nosso feed: </p></div>
 <div id="espacomensagem"></div>
-<div id="conteudo" >             
-	<div class="social">
-		<div class="fototwitter"><img src="img/img.png" alt=""></div>
-	    <div class="nometwitter">André Assunção</div>
-	    <div class="usertwitter">@theconehard</div>
-	    <div class="horatweet">1m</div>
-	    <div class="tweet">Porra, como faço os testes aqui sendo que o servidor está caindo. Desse jeito fica foda né, puta que pariu nessa porra de Hostinger!!</div>
+<div id="conteudo" >          
+
+<div id="social"class="social">
+          <iframe src="views/twitter.html" frameborder="no" ></iframe>
+
+	
 	</div>
+</div>
+
+<div id="tabs">
+     <div id="tabcategoria" class="tabs" ng-style="{'background-color':'#7db1d5'}">
+          <input name="tabs_principal" type="radio" id="categoria" >
+          <label for="categoria" onClick="document.location='#/';">Categoria</label>
+     </div>
+     <div id="tablocais" class="tabs" ng-style="{'background-color':'#7db1d5'}">
+          <input name="tabs_principal" type="radio" id="locais">
+          <label for="locais" onClick="document.location='#/comercios';">Locais</label>
+     </div>
+     <div id="tabsocial" class="tabs" ng-style="{'background-color':'#7db1d5'}">
+          <input name="tabs_principal" type="radio" id="social" checked>
+          <label for="social" onClick="document.location='#/social/';">Social</label>
+     </div>
 </div>

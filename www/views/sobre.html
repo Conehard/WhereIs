@@ -1,0 +1,30 @@
+<div id="header"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo" ng-repeat="cat in categories | limitTo:1" >{{cat.titulo}}</div>
+<div id="espaco"></div>
+<div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
+<div id="espacomensagem"></div>
+<div id="conteudo" >    
+	<div class="categoria" ng-repeat="cat in categories | orderBy: 'name'">
+		<a ng-href="{{cat.rota}}">
+			<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>
+			<div class="nomecategoria"><p>{{cat.name}}</p></div>
+			<div class="descricao"><p>{{cat.descricao}}</p></div>   
+		</a>      
+	</div>
+</div>
+
+<div id="tabs">
+     <div id="tabcategoria" class="tabs" >
+          <input name="tabs_principal" type="radio" id="categoria" checked>
+          <label for="categoria" onClick="document.location='#/';">Categoria</label>
+     </div>
+     <div id="tablocais" class="tabs" >
+          <input name="tabs_principal" type="radio" id="locais">
+          <label for="locais" onClick="document.location='#/comercios';">Locais</label>
+     </div>
+     <div id="tabsocial" class="tabs" >
+          <input name="tabs_principal" type="radio" id="social" >
+          <label for="social" onClick="document.location='#/social/';">Social</label>
+     </div>
+</div>
