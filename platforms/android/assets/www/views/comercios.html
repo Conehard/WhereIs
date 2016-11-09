@@ -1,22 +1,22 @@
 <div id="header" ng-repeat="cat in categories | filter:isStatus"  ng-style="{'background-color':'{{cat.cor}}'}"></div>
 <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
-<div id="titulo" ng-repeat="cat in categories | limitTo:1" >{{cat.titulo}}</div>
+<div id="titulo" ng-repeat="cat in categories | filter:isStatus" >{{cat.name}}</div>
 <div id="espaco"></div>
 <div id="conteudo" >    
-     <div  id="tabsmeio" class="tabsmeio "ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
-          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub = ''"><p>Todos</p></div>
-          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub = {{cat.primaria}}"><p>{{cat.primaria}}</p></div>
-          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub = {{cat.primaria}}"><p>{{cat.secundaria}}</p></div>
-          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub = {{cat.primaria}}"><p>{{cat.terciaria}}</p></div>
+     <div  id="tabsmeio" class="tabsmeio" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
+          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter = null"><p>Todos</p></div>
+          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.primaria}}"><p>{{cat.primaria}}</p></div>
+          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.secundaria}}"><p>{{cat.secundaria}}</p></div>
+          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.terciaria}}"><p>{{cat.terciaria}}</p></div>
      </div>
      <div id="espacomensagem"></div>
-     <div class="comercios" >
-          <div class="imagemcomercio"><img src="img/img.png" alt=""></div>
-          <div class="nomecomercio">Nome local</div>
-          <div class="enderecocomercio">Endereço: </div>
-          <div class="telefonecomercio">Telefone: </div>
+     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC">
+          <div class="imagemcomercio"><img src="{{com.caminhologo}}" alt=""></div>
+          <div class="nomecomercio">{{com.nome}}</div>
+          <div class="enderecocomercio">Endereço: {{com.endereco}}</div>
+          <div class="telefonecomercio">Telefone: {{com.telefone}}</div>
           <div class="avaliacaocomercio">Avaliação: 1-2-3-4-5</div>
-           <div class="avaliacaocomercion">65 </div>
+           <div class="avaliacaocomercion">{{com.totalavaliacao}} </div>
      </div>
 
 </div>
