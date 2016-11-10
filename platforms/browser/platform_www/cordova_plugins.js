@@ -945,7 +945,8 @@ module.exports.metadata =
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.2",
     "cordova-plugin-whitelist": "1.2.2",
-    "cordova-twitter": "0.8.5"
+    "cordova-twitter": "0.8.5",
+    "cordova-plugin-gpslocation": "1.0.0"
 }
 // BOTTOM OF METADATA
 });

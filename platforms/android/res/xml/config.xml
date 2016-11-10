@@ -8,6 +8,12 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="GPSLocation">
+        <param name="android-package" value="fr.louisbl.cordova.gpslocation.CordovaGPSLocation" />
+    </feature>
     <name>WhereIs</name>
     <description>
         Hello World sample application that responds to the deviceready event.

@@ -2,8 +2,11 @@ function config($routeProvider, $locationProvider) {
   
 
   $routeProvider
-
     .when('/', {
+      templateUrl: 'views/inicio.html',
+      controller: 'InicioCtrl'
+    })
+    .when('/categories', {
       templateUrl: 'views/categories.html',
       controller: 'CategoriesCtrl'
     })

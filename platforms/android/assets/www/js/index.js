@@ -34,8 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
- 
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -47,5 +47,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+
 
 };

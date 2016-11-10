@@ -1,0 +1,29 @@
+<div id="header"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo" >Início</div>
+<div id="espaco"></div>
+<div id="mensagem"><p>Selecione sua cidade:</p></div>
+<div id="espacomensagem"></div>
+<div id="conteudo" >    
+	<div id="geolocation">
+          <div class="select"></div>
+         {{newmapa}}
+     </div>
+     
+         
+</div>
+
+<div id="tabs">
+     <div id="tabcategoria" class="tabs" >
+          <input name="tabs_principal" type="radio" id="categoria" checked>
+          <label for="categoria" >Categoria</label>
+     </div>
+     <div id="tablocais" class="tabs" >
+          <input name="tabs_principal" type="radio" id="locais" disabled>
+          <label for="locais" >Locais</label>
+     </div>
+     <div id="tabsocial" class="tabs" >
+          <input name="tabs_principal" type="radio" id="social" >
+          <label for="social" onClick="document.location='#/social/';">Social</label>
+     </div>
+</div>

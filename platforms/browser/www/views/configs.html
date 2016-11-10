@@ -1,6 +1,6 @@
 <div id="header"></div>
 <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
-<div id="titulo" ng-repeat="cat in categories | limitTo:1 filter: " >{{cat.titulo}}</div>
+<div id="titulo">Configurações</div>
 <div id="espaco"></div>
 <div id="mensagem"><p>Descubra o que há de melhor na cidade escolhendo uma das opções abaixo:</p></div>
 <div id="espacomensagem"></div>
@@ -17,11 +17,11 @@
 <div id="tabs">
      <div id="tabcategoria" class="tabs" >
           <input name="tabs_principal" type="radio" id="categoria" checked>
-          <label for="categoria" onClick="document.location='#/';">Categoria</label>
+          <label for="categoria" onClick="document.location='#/categories';">Categoria</label>
      </div>
      <div id="tablocais" class="tabs" >
-          <input name="tabs_principal" type="radio" id="locais">
-          <label for="locais" onClick="document.location='#/comercios';">Locais</label>
+          <input name="tabs_principal" type="radio" id="locais" disabled>
+          <label for="locais" >Locais</label>
      </div>
      <div id="tabsocial" class="tabs" >
           <input name="tabs_principal" type="radio" id="social" >

@@ -38,6 +38,16 @@ body{
     position: fixed;
     z-index: 1;
 }
+
+
+/*INICIO CSS INICIO*/
+#inicio{
+    
+}
+
+
+/*FIM CSS INICIO*/
+
 /*INICIO CSS CATEGORIAS*/
 #mensagem{
     width: 100%;
@@ -350,7 +360,6 @@ body{
 }
 .tabcentroesquerda{
     margin-left: 25%;
-
 }
 
 .tabcentrodireita{  
@@ -377,5 +386,5 @@ body{
     color: #000;
     cursor: pointer;
 }
-
 /*FIM CSS COMERCIO*/
+

@@ -15,6 +15,28 @@
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"android-package\" value=\"org.apache.cordova.geolocation.Geolocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"GPSLocation\"><param name=\"android-package\" value=\"fr.louisbl.cordova.gpslocation.CordovaGPSLocation\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "count": 2
                         }
                     ]
                 }
@@ -27,6 +49,12 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.whereisapp.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.whereisapp.app"
+        },
+        "cordova-plugin-gpslocation": {
+            "PACKAGE_NAME": "com.whereisapp.app"
         }
     },
     "dependent_plugins": {},
@@ -38,10 +66,58 @@
             "clobbers": [
                 "Twitter"
             ]
+        },
+        {
+            "id": "cordova-plugin-geolocation.geolocation",
+            "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+            "pluginId": "cordova-plugin-geolocation",
+            "clobbers": [
+                "navigator.geolocation"
+            ]
+        },
+        {
+            "id": "cordova-plugin-geolocation.PositionError",
+            "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+            "pluginId": "cordova-plugin-geolocation",
+            "runs": true
+        },
+        {
+            "id": "cordova-plugin-gpslocation.Coordinates",
+            "file": "plugins/cordova-plugin-gpslocation/www/Coordinates.js",
+            "pluginId": "cordova-plugin-gpslocation",
+            "clobbers": [
+                "Coordinates"
+            ]
+        },
+        {
+            "id": "cordova-plugin-gpslocation.PositionError",
+            "file": "plugins/cordova-plugin-gpslocation/www/PositionError.js",
+            "pluginId": "cordova-plugin-gpslocation",
+            "clobbers": [
+                "PositionError"
+            ]
+        },
+        {
+            "id": "cordova-plugin-gpslocation.Position",
+            "file": "plugins/cordova-plugin-gpslocation/www/Position.js",
+            "pluginId": "cordova-plugin-gpslocation",
+            "clobbers": [
+                "Position"
+            ]
+        },
+        {
+            "id": "cordova-plugin-gpslocation.GPSLocation",
+            "file": "plugins/cordova-plugin-gpslocation/www/GPSLocation.js",
+            "pluginId": "cordova-plugin-gpslocation",
+            "clobbers": [
+                "window.GPSLocation"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-twitter": "0.8.5",
-        "cordova-plugin-whitelist": "1.2.2"
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-geolocation": "2.1.0",
+        "cordova-plugin-gpslocation": "1.0.0"
     }
 }

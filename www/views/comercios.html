@@ -4,31 +4,34 @@
 <div id="espaco"></div>
 <div id="conteudo" >    
      <div  id="tabsmeio" class="tabsmeio" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
-          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter = null"><p>Todos</p></div>
-          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.primaria}}"><p>{{cat.primaria}}</p></div>
-          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.secundaria}}"><p>{{cat.secundaria}}</p></div>
-          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filter ={{cat.terciaria}}"><p>{{cat.terciaria}}</p></div>
+          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =''"><p>Todos</p></div>
+          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.primaria"><p>{{cat.primaria}}</p></div>
+          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.secundaria"><p>{{cat.secundaria}}</p></div>
+          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.terciaria"><p>{{cat.terciaria}}</p></div>
      </div>
      <div id="espacomensagem"></div>
-     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC">
-          <div class="imagemcomercio"><img src="{{com.caminhologo}}" alt=""></div>
+     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:isStatusL | filter:filterSub">
+          <div class="imagemcomercio"><img ng-src="{{com.caminhologo}}" alt=""></div>
           <div class="nomecomercio">{{com.nome}}</div>
+          <div ng-show="tipos" class="nomecomercio">{{com.tipocomercio}}</div>
           <div class="enderecocomercio">Endereço: {{com.endereco}}</div>
           <div class="telefonecomercio">Telefone: {{com.telefone}}</div>
           <div class="avaliacaocomercio">Avaliação: 1-2-3-4-5</div>
-           <div class="avaliacaocomercion">{{com.totalavaliacao}} </div>
+          <div class="avaliacaocomercion">{{com.totalavaliacao}} </div>
      </div>
+     <div ></div>
+     <div id="map"></div>
 
 </div>
 
 <div id="tabs" ng-model="tabsbaixo">
      <div id="tabcategoria" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
           <input name="tabs_principal" type="radio" id="categoria" >
-          <label for="categoria" onClick="document.location='#/';">Categoria</label>
+          <label for="categoria" onClick="document.location='#/categories';">Categoria</label>
      </div>
      <div id="tablocais" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
           <input name="tabs_principal" type="radio" id="locais" checked>
-          <label for="locais" onClick="document.location='#/comercios';">Locais</label>
+          <label for="locais">Locais</label>
      </div>
      <div id="tabsocial" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
           <input name="tabs_principal" type="radio" id="social" >
