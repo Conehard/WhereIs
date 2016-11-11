@@ -108,6 +108,9 @@
     <access origin="http://egendnetwork.com" />
     <access origin="https://twitter.com"/>
     <access origin="https://*.twitter.com"/>
+    <access origin="https://*.google.com.br"/>
+    <access origin="https://*.google.com"/>
+    <access origin="https://google.com"/>
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

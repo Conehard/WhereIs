@@ -1,0 +1,29 @@
+<div id="header"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo" >Mapa</div>
+<div id="espaco"></div>
+
+<div id="geolocation">
+          <div class="select"></div>
+      
+    <iframe src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDHPTHqWPfql51BBZv8bobUiRiik05ZT0o&origin=-21.1303,-42.3674&destination=-21.1098446,-42.3838966&avoid=tolls|highways" width="100%" height="500px" frameborder="no"  style="border:0" allowfullscreen></iframe>
+
+     </div>
+     
+         
+</div>
+
+<div id="tabs">
+     <div id="tabcategoria" class="tabs" >
+          <input name="tabs_principal" type="radio" id="categoria" checked>
+          <label for="categoria" >Categoria</label>
+     </div>
+     <div id="tablocais" class="tabs" >
+          <input name="tabs_principal" type="radio" id="locais" disabled>
+          <label for="locais" >Locais</label>
+     </div>
+     <div id="tabsocial" class="tabs" >
+          <input name="tabs_principal" type="radio" id="social" >
+          <label for="social" onClick="document.location='#/social/';">Social</label>
+     </div>
+</div>

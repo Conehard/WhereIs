@@ -11,8 +11,6 @@ function AlimentacaoCtrl($scope, $http) {
         $scope.isStatusL = function(com){
 		    return (com.cidade == $scope.newmapa);
 		};
-		
-
     });
   };
 
@@ -28,9 +26,6 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	   	$scope.isStatus = function(cat){
 		    return (cat.ID == $scope.idcategoria);
 		};
-		
-		
-		
 	}).error(function (data) {
 	    console.log("Erro na conexão categorias");
 	});
@@ -41,7 +36,6 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	    $scope.isStatusC = function(com){
 		    return (com.idcategoria == $scope.idcategoria);
 		};
-		
 	}).error(function (datacomercio) {
 	    console.log("Erro em obter os comercios");
 	});
