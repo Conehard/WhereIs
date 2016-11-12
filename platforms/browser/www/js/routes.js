@@ -54,6 +54,7 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/sobre.html',
       controller: 'SobreCtrl'
     })
+    
 
      .otherwise ({ redirectTo: '/' });
 };

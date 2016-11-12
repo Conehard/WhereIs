@@ -3,7 +3,12 @@ body{
     margin:0px; 
     background-color: #d0d0d0;
     overflow: hidden;
-
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 #header{
     width: 100%;
@@ -28,6 +33,10 @@ body{
     width: 100%;
     top: 0;
     height: auto;
+}
+#conteudo a{
+    color: #000;
+    text-decoration: none;
 }
 #titulo{
     top:0;
@@ -259,6 +268,7 @@ body{
     background-color: #fff;
     position: relative;
     border-bottom: 1px solid #000;
+    cursor: pointer;
 }
 .tabsmeio{
     width: 100%;
@@ -354,6 +364,7 @@ body{
     color: #ffffff;
     cursor: pointer;
 }
+
 /*FIM CSS COMERCIO*/
 
 /*INICIO CSS INICIO*/

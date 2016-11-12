@@ -18,6 +18,9 @@
         },
         "cordova-plugin-gpslocation": {
             "PACKAGE_NAME": "com.whereisapp.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.whereisapp.app"
         }
     },
     "dependent_plugins": {}

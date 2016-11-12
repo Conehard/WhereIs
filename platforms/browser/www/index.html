@@ -45,7 +45,7 @@
     <title>Where Is?</title>
 </head>
 
-<body ng-app="whereIs" >
+<body ng-app="whereIs" onselectstart="return false">
     <div ng-view></div>                        
     <div id="menu" class="sidenav" >
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>MENU</span>&times;</a>
@@ -78,8 +78,6 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <script src="js/routes.js"></script>
     <script type="text/javascript" src="js/catcontroller.js"></script>
     <script type="text/javascript" src="js/socialcontroller.js"></script>

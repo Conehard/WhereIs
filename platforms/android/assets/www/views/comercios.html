@@ -10,29 +10,32 @@
           <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.terciaria"><p>{{cat.terciaria}}</p></div>
      </div>
      <div id="espacomensagem"></div>
-     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:isStatusL | filter:filterSub">
-          <div class="imagemcomercio"><img ng-src="{{com.caminhologo}}" alt=""></div>
-          <div class="nomecomercio">{{com.nome}}</div>
-          <div ng-show="tipos" class="nomecomercio">{{com.tipocomercio}}</div>
-          <div class="enderecocomercio">Endereço: {{com.endereco}}</div>
-          <div class="telefonecomercio">Telefone: {{com.telefone}}</div>
-          <div class="avaliacaocomercio">Avaliação: 
-               <img ng-src="img/estrelaszeradas.png" ng-if="(com.mediaavaliacao==0)" alt="">
-               <img ng-src="img/meiaestrelafull.png" ng-if="(com.mediaavaliacao<1 && com.mediaavaliacao>0)" alt="">
-               <img ng-src="img/umaestrela.png" ng-if="(com.mediaavaliacao==1)" alt="">
-               <img ng-src="img/umaestrelaemeia.png" ng-if="(com.mediaavaliacao>1  && com.mediaavaliacao<2)" alt="">
-               <img ng-src="img/duasestrelas.png" ng-if="(com.mediaavaliacao==2)" alt="">
-               <img ng-src="img/duasestrelasemeia.png" ng-if="(com.mediaavaliacao>2 && com.mediaavaliacao<3)" alt="">
-               <img ng-src="img/tresestrelas.png" ng-if="(com.mediaavaliacao==3)" alt="">
-               <img ng-src="img/tresestrelasemeia.png" ng-if="(com.mediaavaliacao>3 && com.mediaavaliacao<4)" alt="">
-               <img ng-src="img/quatroestrelas.png" ng-if="(com.mediaavaliacao==4)" alt="">
-               <img ng-src="img/quatroestrelasemeia.png" ng-if="(com.mediaavaliacao>4 && com.mediaavaliacao<5)" alt="">
-               <img ng-src="img/cincoestrelas.png" ng-if="(com.mediaavaliacao>=5)" alt=""> 
-               <span ng-if="!(com.mediaavaliacao)">Indisponível</span>
+     
+     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:isStatusL | filter:filterSub" >
+          <div ng-click="abrirMapa(com)">
+               <div class="imagemcomercio"><img ng-src="{{com.caminhologo}}" alt=""></div>
+               <div class="nomecomercio">{{com.nome}}</div>
+               <div ng-show="tipos" class="nomecomercio">{{com.tipocomercio}}</div>
+               <div class="enderecocomercio">Endereço: {{com.endereco}}</div>
+               <div class="telefonecomercio">Telefone: {{com.telefone}}</div>
+               <div class="avaliacaocomercio">Avaliação: 
+                    <img ng-src="img/estrelaszeradas.png" ng-if="(com.mediaavaliacao==0)" alt="">
+                    <img ng-src="img/meiaestrelafull.png" ng-if="(com.mediaavaliacao<1 && com.mediaavaliacao>0)" alt="">
+                    <img ng-src="img/umaestrela.png" ng-if="(com.mediaavaliacao==1)" alt="">
+                    <img ng-src="img/umaestrelaemeia.png" ng-if="(com.mediaavaliacao>1  && com.mediaavaliacao<2)" alt="">
+                    <img ng-src="img/duasestrelas.png" ng-if="(com.mediaavaliacao==2)" alt="">
+                    <img ng-src="img/duasestrelasemeia.png" ng-if="(com.mediaavaliacao>2 && com.mediaavaliacao<3)" alt="">
+                    <img ng-src="img/tresestrelas.png" ng-if="(com.mediaavaliacao==3)" alt="">
+                    <img ng-src="img/tresestrelasemeia.png" ng-if="(com.mediaavaliacao>3 && com.mediaavaliacao<4)" alt="">
+                    <img ng-src="img/quatroestrelas.png" ng-if="(com.mediaavaliacao==4)" alt="">
+                    <img ng-src="img/quatroestrelasemeia.png" ng-if="(com.mediaavaliacao>4 && com.mediaavaliacao<5)" alt="">
+                    <img ng-src="img/cincoestrelas.png" ng-if="(com.mediaavaliacao>=5)" alt=""> 
+                    <span ng-if="!(com.mediaavaliacao)">Indisponível</span>
+               </div>
+               <div class="avaliacaocomercion"  ng-if="com.mediaavaliacao">{{com.totalavaliacao}}</div>
           </div>
-          <div class="avaliacaocomercion"  ng-if="com.mediaavaliacao">{{com.totalavaliacao}}</div>
      </div>
-         
+      
      </div>
      <div ></div>
      <div id="map"></div>

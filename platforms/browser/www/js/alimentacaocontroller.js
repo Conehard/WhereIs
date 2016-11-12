@@ -36,6 +36,15 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	    $scope.isStatusC = function(com){
 		    return (com.idcategoria == $scope.idcategoria);
 		};
+		$scope.abrirMapa = function (com){
+			$scope.latitudelocal = com.latitude;
+			$scope.longitudelocal = com.longitude;
+
+
+    		var ref = window.open("https://www.google.com.br/maps/dir/'"+$scope.latlong+"'/'"+$scope.latitudelocal+','+$scope.longitudelocal+"'/", '_blank', 'location=no, closebuttoncaption=Voltar');
+   		};
+		
+		
 	}).error(function (datacomercio) {
 	    console.log("Erro em obter os comercios");
 	});
