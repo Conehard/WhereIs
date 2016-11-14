@@ -408,3 +408,81 @@ body{
     
 }
 /*FIM CSS INICIO*/
+
+/*INICIO CSS EVENTOS*/
+
+.imagemevento img{
+    width: 31%;
+    height: auto;
+    position: relative;
+    border-right: 1px solid #000;
+    margin-bottom: -4px; 
+}
+.nomeevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 2%;
+    margin-left: 35%;
+}
+.localevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 7%;
+    margin-left: 35%;
+}
+.enderecoevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 7%;
+    margin-left: 35%;
+}
+.dataevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 7%;
+    margin-left: 35%;
+}
+.precoeevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 12%;
+    margin-left: 35%;
+}
+.ondecomprarevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 17%;
+    margin-left: 35%;
+}
+.publicoevento{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 17%;
+    margin-left: 35%;
+}
+.informacoesventos{
+    font-family: 'Roboto', sans-serif;
+    height: auto;
+    position: absolute;
+    top: 0;
+    margin-top: 17%;
+    margin-left: 35%;
+}
+
+
+
+/*FIM CSS COMERCIO*/

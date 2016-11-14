@@ -1,6 +1,6 @@
 <div id="header" ng-repeat="cat in categories | filter:isStatus"  ng-style="{'background-color':'{{cat.cor}}'}"></div>
 <div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
-<div id="titulo">Eventos</div>
+<div id="titulo"  ng-repeat="cat in categories | filter:isStatus">Eventos</div>
 <div id="espaco"></div>
 <div id="conteudo" >    
      <div  id="tabsmeio" class="tabsmeio" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
@@ -12,12 +12,18 @@
      <div id="espacomensagem"></div>
      {{erro}}
      <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub" >
-          <div ng-click="abrirMapa(eve)">
-               <div class="imagemcomercio"><img ng-src="{{eve.caminhologo}}" alt=""></div>
-               <div class="nomecomercio">{{eve.nome}}</div>
-               <div ng-show="tipos" class="nomecomercio">{{eve.tipocomercio}}</div>
-               <div class="enderecocomercio">Endereço: {{eve.endereco}}</div>
-               <div class="telefonecomercio">Telefone: {{eve.telefone}}</div>
+          <div ng-click="abrirInformacoes(eve)">
+               <div class="imagemevento"><img ng-src="{{eve.caminhologo}}" alt=""></div>
+               <div class="nomeevento">{{eve.nome}}</div>
+               <div ng-show="tipos" class="tipoevento">{{eve.tipoevento}}</div>
+               <div class="localevento">Local: {{eve.local}}</div>
+               <div ng-if="(eve.endereco)" class="enderecoevento">Endereco: {{eve.endereco}}</div>
+               <div ng-if="(eve.preco)" class="precoeevento">Preço: {{eve.preco}}</div>
+               <div ng-if="!(eve.preco)" class="precoeevento">Preço: Gratuito</div>
+               <div class="dataevento">Data: {{eve.data}}</div>
+               <div ng-if="(eve.preco)" class="ondecomprarevento">Onde comprar: {{eve.comprar}}</div>
+               <div class="publicoevento">Público: {{eve.publico}}</div>
+               <div ng-if="(eve.informacoes)" class="informacoesventos">Clique aqui para mais informacoes</div>
           </div> 
      </div>
       

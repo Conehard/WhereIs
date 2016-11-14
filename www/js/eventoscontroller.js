@@ -9,7 +9,7 @@ function EventosCtrl($scope, $http) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
         $scope.isStatusL = function(eve){
-		    return (com.cidade == $scope.newmapa);
+		    return (eve.cidade == $scope.newmapa);
 		};
     });
   };
@@ -22,7 +22,7 @@ function EventosCtrl($scope, $http) {
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	$http.get('http://egendnetwork.com/categorias.php').success(function (data) {
 	    $scope.categories = data;
-	    $scope.idcategoria = 1;
+	    $scope.idcategoria = 3;
 	   	$scope.isStatus = function(cat){
 		    return (cat.ID == $scope.idcategoria);
 		};
@@ -32,22 +32,19 @@ navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 	});
 
-	$http.get('http://egendnetwork.com/comercios.php').success(function (dataeventos) {
+	$http.get('http://egendnetwork.com/eventos.php').success(function (dataeventos) {
 	    $scope.eventos = dataeventos;
 	    $scope.filterSub = { };
-	    $scope.isStatusC = function(eve){
+	    $scope.isStatusC = function(com){
 		    return (com.idcategoria == $scope.idcategoria);
 		};
-		$scope.abrirMapa = function (eve){
-			$scope.latitudelocal = com.latitude;
-			$scope.longitudelocal = com.longitude;
-
-
-    		var ref = window.open("https://www.google.com.br/maps/dir/'"+$scope.latlong+"'/'"+$scope.latitudelocal+','+$scope.longitudelocal+"'/", '_blank', 'location=no, closebuttoncaption=Voltar');
+		$scope.abrirInformacoes = function (eve){
+			$scope.link = eve.informacoes;
+    		var ref = window.open($scope.link, '_blank', 'location=no, closebuttoncaption=Voltar');
    		};
 	}).error(function (dataeventos) {
-	    console.log("Erro em obter os comercios");
-	    $scope.erro = "Não foi possível obter os comercios, tenha certeza de estar conectado a internet para utilizar o aplicativo. Caso esteja e ainda esteja vendo este erro, aguarde alguns segundos e tente novamente.";
+	    console.log("Erro em obter os eventos");
+	    $scope.erro = "Não foi possível obter os eventos, tenha certeza de estar conectado a internet para utilizar o aplicativo. Caso esteja e ainda esteja vendo este erro, aguarde alguns segundos e tente novamente.";
 
 	});
 
