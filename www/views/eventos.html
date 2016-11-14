@@ -12,7 +12,7 @@
      <div id="espacomensagem"></div>
      {{erro}}
      <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub" >
-          <div ng-click="abrirMapa(com)">
+          <div ng-click="abrirMapa(eve)">
                <div class="imagemcomercio"><img ng-src="{{eve.caminhologo}}" alt=""></div>
                <div class="nomecomercio">{{eve.nome}}</div>
                <div ng-show="tipos" class="nomecomercio">{{eve.tipocomercio}}</div>
