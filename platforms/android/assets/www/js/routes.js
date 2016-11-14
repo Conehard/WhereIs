@@ -54,6 +54,11 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/sobre.html',
       controller: 'SobreCtrl'
     })
+    .when('/eventos', {
+      templateUrl: 'views/eventos.html',
+      controller: 'EventosCtrl'
+    })
+    
     
 
      .otherwise ({ redirectTo: '/' });

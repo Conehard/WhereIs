@@ -1,0 +1,43 @@
+<div id="header" ng-repeat="cat in categories | filter:isStatus"  ng-style="{'background-color':'{{cat.cor}}'}"></div>
+<div id="menuicone" onclick="openNav()"><img src="img/menuicon.png" alt=""></div>
+<div id="titulo">Eventos</div>
+<div id="espaco"></div>
+<div id="conteudo" >    
+     <div  id="tabsmeio" class="tabsmeio" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
+          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =''"><p>Todos</p></div>
+          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.primaria"><p>{{cat.primaria}}</p></div>
+          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.secundaria"><p>{{cat.secundaria}}</p></div>
+          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.terciaria"><p>{{cat.terciaria}}</p></div>
+     </div>
+     <div id="espacomensagem"></div>
+     {{erro}}
+     <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub" >
+          <div ng-click="abrirMapa(com)">
+               <div class="imagemcomercio"><img ng-src="{{eve.caminhologo}}" alt=""></div>
+               <div class="nomecomercio">{{eve.nome}}</div>
+               <div ng-show="tipos" class="nomecomercio">{{eve.tipocomercio}}</div>
+               <div class="enderecocomercio">Endereço: {{eve.endereco}}</div>
+               <div class="telefonecomercio">Telefone: {{eve.telefone}}</div>
+          </div> 
+     </div>
+      
+     </div>
+     <div ></div>
+     <div id="map"></div>
+
+</div>
+
+<div id="tabs" ng-model="tabsbaixo">
+     <div id="tabcategoria" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
+          <input name="tabs_principal" type="radio" id="categoria" >
+          <label for="categoria" onClick="document.location='#/categories';">Categoria</label>
+     </div>
+     <div id="tablocais" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
+          <input name="tabs_principal" type="radio" id="locais" checked>
+          <label for="locais">Locais</label>
+     </div>
+     <div id="tabsocial" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
+          <input name="tabs_principal" type="radio" id="social" >
+          <label for="social" onClick="document.location='#/social/';">Social</label>
+     </div>
+</div>
