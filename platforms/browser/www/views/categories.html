@@ -6,7 +6,7 @@
 <div id="espacomensagem"></div>
 <div id="conteudo" >    
 {{erro}}
-	<div class="categoria" ng-repeat="cat in categories | orderBy: 'name'">
+	<div class="categoria" ng-repeat="cat in categories | orderBy: 'id'">
 		<a id="mapgeo" ng-href="{{cat.rota}}">
 			<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>
 			<div class="nomecategoria"><p>{{cat.name}}</p></div>
