@@ -1,4 +1,4 @@
-function AlimentacaoCtrl($scope, $http) {
+function SaudeCtrl($scope, $http) {
   $scope.loading = true;
   var onSuccess = function(position) {
     $scope.latitude = position.coords.latitude;
@@ -8,26 +8,23 @@ function AlimentacaoCtrl($scope, $http) {
     $http.get('https://maps.google.com/maps/api/geocode/json?latlng='+$scope.latlong+'&sensor=false&key=AIzaSyD03iJeEEgdhw1O0oTK5qqtd2Iy6uAzJAE').success(function (data) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
-        $scope.isStatusL = function(com){
-		    return (com.cidade == $scope.newmapa);
-		};
 		$http.get('http://egendnetwork.com/comercios.php?cidade='+$scope.newmapa).success(function (datacomercio) {
 		    $scope.comercio = datacomercio;
 		    $scope.filterSub = { };
 		    $scope.isStatusC = function(com){
 			    return (com.idcategoria == $scope.idcategoria);
 			};
-			$scope.abrirMapa = function (com){
-				$scope.latitudelocal = com.latitude;
-				$scope.longitudelocal = com.longitude;
-	    		var ref = window.open("https://www.google.com.br/maps/dir/'"+$scope.latlong+"'/'"+$scope.latitudelocal+','+$scope.longitudelocal+"'/", '_blank', 'location=no, closebuttoncaption=Voltar');
-	   		};
 		}).error(function (datacomercio) {
 		    console.log("Erro em obter os comercios");
 		    $scope.erro = "Não foi possível obter os comercios, tenha certeza de estar conectado a internet para utilizar o aplicativo. Caso esteja e ainda esteja vendo este erro, aguarde alguns segundos e tente novamente.";
 		}).finally(function () {
 			$scope.loading = false;
 	    });
+	    $scope.abrirMapa = function (com){
+				$scope.latitudelocal = com.latitude;
+				$scope.longitudelocal = com.longitude;
+	    		var ref = window.open("https://www.google.com.br/maps/dir/'"+$scope.latlong+"'/'"+$scope.latitudelocal+','+$scope.longitudelocal+"'/", '_blank', 'location=no, closebuttoncaption=Voltar');
+	   	};
     });
   };
 
@@ -51,4 +48,4 @@ function AlimentacaoCtrl($scope, $http) {
 
 angular
   .module('whereIs')
-  .controller('AlimentacaoCtrl', AlimentacaoCtrl);
+  .controller('SaudeCtrl', SaudeCtrl);

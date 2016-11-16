@@ -12,7 +12,7 @@
      <div id="espacomensagem"></div>
      {{erro}}
      <img id="loadingimg" src="img/spin.gif" ng-show="loading" />
-     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:isStatusL | filter:filterSub" >
+     <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:filterSub" >
           <div ng-click="abrirMapa(com)">
                <div class="imagemcomercio"><img ng-src="{{com.caminhologo}}" alt=""></div>
                <div class="nomecomercio">{{com.nome}}</div>

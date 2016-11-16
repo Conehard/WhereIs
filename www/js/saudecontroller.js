@@ -8,9 +8,6 @@ function SaudeCtrl($scope, $http) {
     $http.get('https://maps.google.com/maps/api/geocode/json?latlng='+$scope.latlong+'&sensor=false&key=AIzaSyD03iJeEEgdhw1O0oTK5qqtd2Iy6uAzJAE').success(function (data) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
-        $scope.isStatusL = function(com){
-		    return (com.cidade == $scope.newmapa);
-		};
 		$http.get('http://egendnetwork.com/comercios.php?cidade='+$scope.newmapa).success(function (datacomercio) {
 		    $scope.comercio = datacomercio;
 		    $scope.filterSub = { };
