@@ -6,6 +6,7 @@
 <div id="espacomensagem"></div>
 <div id="conteudo" >    
 {{erro}}
+     <img id="loadingimg" src="img/spin.gif" ng-show="loading" />
 	<div class="categoria" ng-repeat="cat in categories | orderBy: 'id'">
 		<a id="mapgeo" ng-href="{{cat.rota}}">
 			<div class="imagemcategoria"><img ng-src="{{cat.image}}" alt=""></div>

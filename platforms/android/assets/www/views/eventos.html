@@ -11,6 +11,7 @@
      </div>
      <div id="espacomensagem"></div>
      {{erro}}
+     <img id="loadingimg" src="img/spin.gif" ng-show="loading" />
      <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub" >
           <div ng-click="abrirInformacoes(eve)">
                <div class="imagemevento"><img ng-src="{{eve.caminhologo}}" alt=""></div>
