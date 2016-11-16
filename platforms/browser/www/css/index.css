@@ -365,6 +365,13 @@ body{
     cursor: pointer;
 }
 
+#loadingimg{
+    width: 20%;
+    height: auto;
+    margin-left: 40%;
+    margin-top: 45%;
+}
+
 /*FIM CSS COMERCIO*/
 
 /*INICIO CSS INICIO*/
