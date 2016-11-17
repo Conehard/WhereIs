@@ -10,7 +10,7 @@
           <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.terciaria"><p>{{cat.terciaria}}</p></div>
      </div>
      <div id="espacomensagem"></div>
-     {{erro}}
+     <p ng-if="(erro)" style="text-align:center;">{{erro}}</p>
      <img id="loadingimg" src="img/spin.gif" ng-show="loading" />
      <div class="comercios" ng-repeat="com in comercio | filter:isStatusC | filter:filterSub" >
           <div ng-click="abrirMapa(com)">

@@ -4,12 +4,13 @@ function InicioCtrl($scope, $http) {
     $scope.latitude = position.coords.latitude;
     $scope.longitude = position.coords.longitude;
     $scope.latlong = $scope.latitude+','+$scope.longitude;
-    $scope.mapaif = ('https://www.google.com/maps/embed/v1/directions?key=AIzaSyDHPTHqWPfql51BBZv8bobUiRiik05ZT0o&origin='+$scope.latlong+'&destination='+$scope.latlong+'&avoid=tolls|highways');
+
     $http.get('https://maps.google.com/maps/api/geocode/json?latlng='+$scope.latlong+'&sensor=false&key=AIzaSyD03iJeEEgdhw1O0oTK5qqtd2Iy6uAzJAE').success(function (data) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
+        $scope.mapaif = ('https://www.google.com/maps/embed/v1/place?key=AIzaSyDHPTHqWPfql51BBZv8bobUiRiik05ZT0o&q='+$scope.newmapa);
+       
        // alert(JSON.stringify($scope.newmapa) );
-
     });
   };
 
@@ -18,9 +19,7 @@ function InicioCtrl($scope, $http) {
       alert('code: '    + error.code    + '\n' +
             'message: ' + error.message + '\n');
   };
-
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
-	
+  navigator.geolocation.getCurrentPosition(onSuccess, onError);
 }
 
 angular

@@ -10,6 +10,9 @@ function AlimentacaoCtrl($scope, $http) {
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
 		$http.get('http://egendnetwork.com/comercios.php?cidade='+$scope.newmapa).success(function (datacomercio) {
 		    $scope.comercio = datacomercio;
+		    if($scope.comercio == ""){
+				$scope.erro = "Ainda não existem comercios cadastrados nesta cidade.";
+		    };
 		    $scope.filterSub = { };
 		    $scope.isStatusC = function(com){
 			    return (com.idcategoria == $scope.idcategoria);

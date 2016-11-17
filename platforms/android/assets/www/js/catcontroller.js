@@ -8,7 +8,6 @@ function CategoriesCtrl($scope, $http) {
 	}).finally(function () {
 		$scope.loading = false;
 	});
-
 }
 
 angular
