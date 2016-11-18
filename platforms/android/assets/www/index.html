@@ -39,12 +39,11 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-
+  
     <script src="js/angular.min.js"></script>
-    
     <title>Where Is?</title>
 </head>
-<body ng-app="whereIs" onselectstart="return false">
+<body ng-app="whereIs" onselectstart="return false" ng-swipe-left="test(game)">
     <div ng-view></div>                        
     <div id="menu" class="sidenav" >
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>MENU</span>&times;</a>
@@ -73,6 +72,7 @@
       <hr>
       <a href="" onclick="closeNav()"> </a>
       <hr>
+      </ng-swipe-left>
     </div>
     
     <script type="text/javascript" src="cordova.js"></script>

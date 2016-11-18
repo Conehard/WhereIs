@@ -8,10 +8,10 @@
     </feature>
     <name>WhereIs</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        O Where Is? é um aplicativo para facilitar as pessoas a encontrarem locais em cidades desconhecidas.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="andre@egendnetwork.com" href="http://egendnetwork.com">
+        André Augusto
     </author>
     <content src="index.html" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
