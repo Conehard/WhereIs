@@ -58,8 +58,18 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/eventos.html',
       controller: 'EventosCtrl'
     })
-    
-    
+    .when('/escolas', {
+      templateUrl: 'views/comercios.html',
+      controller: 'EscolasCtrl'
+    })
+    .when('/lojas', {
+      templateUrl: 'views/comercios.html',
+      controller: 'LojasCtrl'
+    })
+    .when('/mercado', {
+      templateUrl: 'views/comercios.html',
+      controller: 'MercadoCtrl'
+    })
 
      .otherwise ({ redirectTo: '/' });
 };

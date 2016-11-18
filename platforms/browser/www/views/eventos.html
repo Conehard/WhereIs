@@ -12,7 +12,7 @@
      <div id="espacomensagem"></div>
      <p ng-if="(erro)" style="text-align:center;">{{erro}}</p>
      <img id="loadingimg" src="img/spin.gif" ng-show="loading" />
-     <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub" >
+     <div class="comercios" ng-repeat="eve in eventos | filter:isStatusC | filter:isStatusL | filter:filterSub">
           <div ng-click="abrirInformacoes(eve)">
                <div class="imagemevento"><img ng-src="{{eve.caminhologo}}" alt=""></div>
                <div class="nomeevento">{{eve.nome}}</div>
@@ -23,16 +23,12 @@
                <div ng-if="!(eve.preco)" class="precoeevento">Preço: Gratuito</div>
                <div class="dataevento">Data: {{eve.data}}</div>
                <div ng-if="(eve.preco)" class="ondecomprarevento">Pontos de venda: {{eve.comprar}}</div>
-               <div class="publicoevento">Público: {{eve.publico}}</div>
-               <div ng-if="(eve.informacoes)" class="informacoesventos">Clique aqui para mais informacoes</div>
+               <div class="publicoevento">Classificação: {{eve.publico}}</div>
+               <div ng-if="(eve.informacoes)" class="informacoesventos">Mais informações</div>
           </div> 
      </div>
-      
-     </div>
-     <div ></div>
-     <div id="map"></div>
-
 </div>
+
 
 <div id="tabs" ng-model="tabsbaixo">
      <div id="tabcategoria" class="tabs" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
