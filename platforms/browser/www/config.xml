@@ -23,6 +23,8 @@
     <access origin="https://*.google.com.br" />
     <access origin="https://*.google.com" />
     <access origin="https://google.com" />
+    <access origin="http://i.imgur.com" />
+    <access origin="http://*.imgur.com" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

@@ -280,7 +280,7 @@ body{
 }
 .imagemcomercio img{
     width: 31%;
-    height: auto;
+    height: 80px;
     position: relative;
     border-right: 1px solid #000;
     margin-bottom: -4px; 
@@ -420,7 +420,7 @@ body{
 
 .imagemevento img{
     width: 40%;
-    height: 128px;
+    height: 126px;
     position: relative;
     border-right: 1px solid #000;
     margin-bottom: -4px;
@@ -485,7 +485,7 @@ body{
     top: 0;
     margin-top: 32.8%;
     margin-left: 0%;
-    text-indent: 2%;
+    text-indent: 1%;
     background-color: #ff9800;
     height: 20px;
     width: 40%;

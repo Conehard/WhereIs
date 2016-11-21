@@ -7,7 +7,7 @@ function EventosCtrl($scope, $http) {
     $http.get('https://maps.google.com/maps/api/geocode/json?latlng='+$scope.latlong+'&sensor=false&key=AIzaSyD03iJeEEgdhw1O0oTK5qqtd2Iy6uAzJAE').success(function (data) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
-		$http.get('http://egendnetwork.com/eventos.php?cidade='+$scope.newmapa).success(function (dataeventos) {
+		$http.get('http://egendnetwork.com/whereis/eventos.php?cidade='+$scope.newmapa).success(function (dataeventos) {
 		    $scope.eventos = dataeventos;
 		    if($scope.eventos == ""){
 				$scope.erro = "Ainda não existem eventos cadastrados nesta cidade.";
@@ -36,7 +36,7 @@ function EventosCtrl($scope, $http) {
 	};
 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-	$http.get('http://egendnetwork.com/categorias.php').success(function (data) {
+	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
 	    $scope.idcategoria = 3;
 	   	$scope.isStatus = function(cat){

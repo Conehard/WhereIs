@@ -3,8 +3,8 @@ function config($routeProvider, $locationProvider) {
 
   $routeProvider
     .when('/', {
-      templateUrl: 'views/inicio.html',
-      controller: 'InicioCtrl'
+      templateUrl: 'views/categories.html',
+      controller: 'CategoriesCtrl'
     })
     .when('/categories', {
       templateUrl: 'views/categories.html',
@@ -70,7 +70,14 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/comercios.html',
       controller: 'MercadoCtrl'
     })
-
+    .when('/others', {
+      templateUrl: 'views/comercios.html',
+      controller: 'OthersCtrl'
+    })
+    .when('/lazer', {
+      templateUrl: 'views/comercios.html',
+      controller: 'LazerCtrl'
+    })
      .otherwise ({ redirectTo: '/' });
 };
 

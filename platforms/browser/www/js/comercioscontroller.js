@@ -1,5 +1,5 @@
 function ComerciosCtrl($scope, $http) {
-	$http.get('http://egendnetwork.com/categorias.php').success(function (data) {
+	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
 	}).error(function (data) {
 	    console.log("Erro na conexão categorias");
@@ -7,7 +7,7 @@ function ComerciosCtrl($scope, $http) {
 
 	});
 
-	$http.get('http://egendnetwork.com/comercios.php').success(function (data) {
+	$http.get('http://egendnetwork.com/whereis/comercios.php').success(function (data) {
 	    $scope.comercios = data;
 	}).error(function (data) {
 	    console.log("Erro em obter os comercios");

@@ -8,7 +8,7 @@ function SaudeCtrl($scope, $http) {
     $http.get('https://maps.google.com/maps/api/geocode/json?latlng='+$scope.latlong+'&sensor=false&key=AIzaSyD03iJeEEgdhw1O0oTK5qqtd2Iy6uAzJAE').success(function (data) {
         $scope.mapa = data;
         $scope.newmapa = $scope.mapa.results[0].address_components[3].long_name;
-		$http.get('http://egendnetwork.com/comercios.php?cidade='+$scope.newmapa).success(function (datacomercio) {
+		$http.get('http://egendnetwork.com/whereis/comercios.php?cidade='+$scope.newmapa).success(function (datacomercio) {
 		    $scope.comercio = datacomercio;
 		    if($scope.comercio == ""){
 				$scope.erro = "Ainda não existem comercios cadastrados nesta cidade.";
@@ -37,7 +37,7 @@ function SaudeCtrl($scope, $http) {
 	};
 	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-	$http.get('http://egendnetwork.com/categorias.php').success(function (data) {
+	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
 	    $scope.idcategoria = 2;
 	   	$scope.isStatus = function(cat){
