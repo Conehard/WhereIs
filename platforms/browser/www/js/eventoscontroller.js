@@ -38,7 +38,7 @@ function EventosCtrl($scope, $http) {
 
 	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
-	    $scope.idcategoria = 3;
+	    $scope.idcategoria = 1;
 	   	$scope.isStatus = function(cat){
 		    return (cat.ID == $scope.idcategoria);
 		};

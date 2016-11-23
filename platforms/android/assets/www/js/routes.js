@@ -18,6 +18,10 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/comerciosall.html',
       controller: 'ComerciosCtrl'
     })
+    .when('/eventos', {
+      templateUrl: 'views/eventos.html',
+      controller: 'EventosCtrl'
+    })
     .when('/alimentacao', {
       templateUrl: 'views/comercios.html',
       controller: 'AlimentacaoCtrl'
@@ -25,6 +29,10 @@ function config($routeProvider, $locationProvider) {
     .when('/saude', {
       templateUrl: 'views/comercios.html',
       controller: 'SaudeCtrl'
+    })
+    .when('/escolas', {
+      templateUrl: 'views/comercios.html',
+      controller: 'EscolasCtrl'
     })
     .when('/hospedagem', {
       templateUrl: 'views/comercios.html',
@@ -34,17 +42,25 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/comercios.html',
       controller: 'ConvenienciaCtrl'
     })
+    .when('/lojas', {
+      templateUrl: 'views/comercios.html',
+      controller: 'LojasCtrl'
+    })
     .when('/entretenimento', {
       templateUrl: 'views/comercios.html',
       controller: 'EntretenimentoCtrl'
     })
-    .when('/demais', {
-      templateUrl: 'views/comercios.html',
-      controller: 'DemaisCtrl'
-    })
     .when('/pontos', {
       templateUrl: 'views/comercios.html',
       controller: 'PontosCtrl'
+    })
+    .when('/mercados', {
+      templateUrl: 'views/comercios.html',
+      controller: 'MercadosCtrl'
+    })
+    .when('/demais', {
+      templateUrl: 'views/comercios.html',
+      controller: 'DemaisCtrl'
     })
     .when('/configs', {
       templateUrl: 'views/configs.html',
@@ -54,30 +70,7 @@ function config($routeProvider, $locationProvider) {
       templateUrl: 'views/sobre.html',
       controller: 'SobreCtrl'
     })
-    .when('/eventos', {
-      templateUrl: 'views/eventos.html',
-      controller: 'EventosCtrl'
-    })
-    .when('/escolas', {
-      templateUrl: 'views/comercios.html',
-      controller: 'EscolasCtrl'
-    })
-    .when('/lojas', {
-      templateUrl: 'views/comercios.html',
-      controller: 'LojasCtrl'
-    })
-    .when('/mercado', {
-      templateUrl: 'views/comercios.html',
-      controller: 'MercadoCtrl'
-    })
-    .when('/others', {
-      templateUrl: 'views/comercios.html',
-      controller: 'OthersCtrl'
-    })
-    .when('/lazer', {
-      templateUrl: 'views/comercios.html',
-      controller: 'LazerCtrl'
-    })
+
      .otherwise ({ redirectTo: '/' });
 };
 

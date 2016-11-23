@@ -1,4 +1,4 @@
-function SaudeCtrl($scope, $http) {
+function ConvenienciaCtrl($scope, $http) {
   $scope.loading = true;
   var onSuccess = function(position) {
     $scope.latitude = position.coords.latitude;
@@ -18,7 +18,7 @@ function SaudeCtrl($scope, $http) {
 			};
 		}).error(function (datacomercio) {
 		    console.log("Erro em obter os comercios");
-		    $scope.erro = "Não foi possível obter os itens da categoria, tenha certeza de estar conectado a internet para utilizar o aplicativo. Caso esteja e ainda esteja vendo este erro, aguarde alguns segundos e tente novamente.";
+		    $scope.erro = "Não foi possível obter os comercios, tenha certeza de estar conectado a internet para utilizar o aplicativo. Caso esteja e ainda esteja vendo este erro, aguarde alguns segundos e tente novamente.";
 		}).finally(function () {
 			$scope.loading = false;
 	    });
@@ -38,7 +38,7 @@ function SaudeCtrl($scope, $http) {
 
 	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
-	    $scope.idcategoria = 3;
+	    $scope.idcategoria = 6;
 	   	$scope.isStatus = function(cat){
 		    return (cat.ID == $scope.idcategoria);
 		};
@@ -50,4 +50,4 @@ function SaudeCtrl($scope, $http) {
 
 angular
   .module('whereIs')
-  .controller('SaudeCtrl', SaudeCtrl);
+  .controller('ConvenienciaCtrl', ConvenienciaCtrl);

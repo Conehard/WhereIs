@@ -1,4 +1,4 @@
-function SaudeCtrl($scope, $http) {
+function HospedagemCtrl($scope, $http) {
   $scope.loading = true;
   var onSuccess = function(position) {
     $scope.latitude = position.coords.latitude;
@@ -38,7 +38,7 @@ function SaudeCtrl($scope, $http) {
 
 	$http.get('http://egendnetwork.com/whereis/categorias.php').success(function (data) {
 	    $scope.categories = data;
-	    $scope.idcategoria = 3;
+	    $scope.idcategoria = 5;
 	   	$scope.isStatus = function(cat){
 		    return (cat.ID == $scope.idcategoria);
 		};
@@ -50,4 +50,4 @@ function SaudeCtrl($scope, $http) {
 
 angular
   .module('whereIs')
-  .controller('SaudeCtrl', SaudeCtrl);
+  .controller('HospedagemCtrl', HospedagemCtrl);
