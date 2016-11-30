@@ -13,8 +13,8 @@ function EventosCtrl($scope, $http) {
 				$scope.erro = "Ainda não existem eventos cadastrados nesta cidade.";
 		    };
 		    $scope.filterSub = { };
-		    $scope.isStatusC = function(com){
-			    return (com.idcategoria == $scope.idcategoria);
+		    $scope.isStatusC = function(eve){
+			    return (eve.idcategoria == $scope.idcategoria);
 			};
 		}).error(function (dataeventos) {
 		    console.log("Erro em obter os eventos");
@@ -22,9 +22,9 @@ function EventosCtrl($scope, $http) {
 		}).finally(function () {
 			$scope.loading = false;
 	    });
-	    $scope.abrirMapa = function (com){
-				$scope.latitudelocal = com.latitude;
-				$scope.longitudelocal = com.longitude;
+	    $scope.abrirMapa = function (eve){
+				$scope.latitudelocal = eve.latitude;
+				$scope.longitudelocal = eve.longitude;
 	    		var ref = window.open("https://www.google.com.br/maps/dir/'"+$scope.latlong+"'/'"+$scope.latitudelocal+','+$scope.longitudelocal+"'/", '_blank', 'location=no, closebuttoncaption=Voltar');
 	   	};
     });

@@ -4,10 +4,10 @@
 <div id="espaco"></div>
 <div id="conteudo" >    
      <div  id="tabsmeio" class="tabsmeio" ng-repeat="cat in categories | filter:isStatus" ng-style="{'background-color':'{{cat.cor}}'}">
-          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =''"><p>Todos</p></div>
-          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.primaria"><p>{{cat.primaria}}</p></div>
-          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.secundaria"><p>{{cat.secundaria}}</p></div>
-          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipocomercio =cat.terciaria"><p>{{cat.terciaria}}</p></div>
+          <div class="tabesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipoevento =''"><p>Todos</p></div>
+          <div class="tabcentroesquerda tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipoevento =cat.primaria"><p>{{cat.primaria}}</p></div>
+          <div class="tabcentrodireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipoevento =cat.secundaria"><p>{{cat.secundaria}}</p></div>
+          <div class="tabdireita tabsmid" ng-style="{'background-color':'{{cat.cor}}'}" ng-click="filterSub.tipoevento =cat.terciaria"><p>{{cat.terciaria}}</p></div>
      </div>
      <div id="espacomensagem"></div>
      <p ng-if="(erro)" style="text-align:center;">{{erro}}</p>
